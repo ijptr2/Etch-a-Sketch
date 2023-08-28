@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+    <style>
+      .header {
+        opacity: 40%;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      button {
+        width: 80px;
+        height: 20px;
+        border: 1px solid black;
+        border-radius: 10px;
+      }
+      .main_body {
+        width: 600px;
+        height: 600px;
+        padding-left: 300px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        gap: 2px;
+      }
+      .square {
+        width: 100%;
+        height: 100%;
+        background-color: #ccc;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <button type="button" onclick="remove()">Erase</button>
+      <button type="button" onclick="setScreen()">Set Screen</button>
+      <button type="button" class="rainBow">RainBow</button>
+    </div>
+    <div class="main_body"></div>
+    <div class="footer"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
